@@ -1,0 +1,4 @@
+module ios {
+    header "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/ios-Swift.h"
+    requires objc
+}

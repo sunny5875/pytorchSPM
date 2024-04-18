@@ -1,0 +1,88 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "ios-debug.module": ["<ios-debug.module>"]
+  "iosPackageTests-debug.test": ["<iosPackageTests-debug.test>"]
+  "iosTests-debug.module": ["<iosTests-debug.module>"]
+  "main": ["<ios-debug.module>"]
+  "test": ["<ios-debug.module>","<iosPackageTests-debug.test>","<iosTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Sources/ios/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Tests/iosTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Sources/ios/ios.swift"]
+    outputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/sources"]
+    description: "Write auxiliary file /Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/sources"
+
+  "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/ios.swift.o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests.swift.o"]
+    outputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.product/Objects.LinkFileList"
+
+  "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Tests/iosTests/iosTests.swift"]
+    outputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/sources"]
+    description: "Write auxiliary file /Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/sources"
+
+  "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<ios-debug.module>":
+    tool: phony
+    inputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/ios.swift.o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.swiftmodule"]
+    outputs: ["<ios-debug.module>"]
+
+  "<iosPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.xctest/Contents/MacOS/iosPackageTests"]
+    outputs: ["<iosPackageTests-debug.test>"]
+
+  "<iosTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests.swift.o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.swiftmodule"]
+    outputs: ["<iosTests-debug.module>"]
+
+  "C.ios-debug.module":
+    tool: shell
+    inputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Sources/ios/ios.swift","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/sources"]
+    outputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/ios.swift.o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.swiftmodule"]
+    description: "Compiling Swift Module 'ios' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","ios","-emit-dependencies","-emit-module","-emit-module-path","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.swiftmodule","-output-file-map","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/sources","-I","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/ios-Swift.h","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","ios"]
+
+  "C.iosPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.build/ios.swift.o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests.swift.o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.xctest/Contents/MacOS/iosPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/iosPackageTests.xctest/Contents/MacOS/iosPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug","-o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.xctest/Contents/MacOS/iosPackageTests","-module-name","iosPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosPackageTests.product/Objects.LinkFileList","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.iosTests-debug.module":
+    tool: shell
+    inputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Tests/iosTests/iosTests.swift","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ios.swiftmodule","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/sources"]
+    outputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests.swift.o","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.swiftmodule"]
+    description: "Compiling Swift Module 'iosTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","iosTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.swiftmodule","-output-file-map","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/sources","-I","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx13.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","ios"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Sources/ios/","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Tests/iosTests/","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Package.swift","/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

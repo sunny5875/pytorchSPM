@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/master.swiftdeps"
+  },
+  "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/Tests/iosTests/iosTests.swift": {
+    "dependencies": "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests.d",
+    "object": "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests.swift.o",
+    "swiftmodule": "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/hyunsubin/Desktop/Coding/Study/pytorchSPM/ios/.build/arm64-apple-macosx/debug/iosTests.build/iosTests.swiftdeps"
+  }
+}
