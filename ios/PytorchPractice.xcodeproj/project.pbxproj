@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D682CD922BD111FE00AB1FF9 /* LibTorchLitSPM in Frameworks */ = {isa = PBXBuildFile; productRef = D682CD912BD111FE00AB1FF9 /* LibTorchLitSPM */; };
+		C4077B7156971BD6419F2863 /* libPods-PytorchPractice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D441376341A048FF650C0D /* libPods-PytorchPractice.a */; };
 		D6A60F9C2BD100BA000AB98A /* mobilenetv2_coreml.ptl in Resources */ = {isa = PBXBuildFile; fileRef = D6A60F962BD100B4000AB98A /* mobilenetv2_coreml.ptl */; };
 		D6A60F9D2BD100BA000AB98A /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = D6A60F972BD100B4000AB98A /* words.txt */; };
 		D6A60FA02BD100BA000AB98A /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A60F9B2BD100BA000AB98A /* image.png */; };
@@ -40,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02FBDC9FA2C0E53CF02CC78D /* Pods-PytorchPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PytorchPractice.release.xcconfig"; path = "Target Support Files/Pods-PytorchPractice/Pods-PytorchPractice.release.xcconfig"; sourceTree = "<group>"; };
+		306C71989FAEE582A6F6D789 /* Pods-PytorchPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PytorchPractice.debug.xcconfig"; path = "Target Support Files/Pods-PytorchPractice/Pods-PytorchPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		B5D441376341A048FF650C0D /* libPods-PytorchPractice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PytorchPractice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A1A8FA2BD111DB00349ABC /* LibTorchLitSPM */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LibTorchLitSPM; path = ../LibTorchLitSPM; sourceTree = "<group>"; };
 		D6A60F962BD100B4000AB98A /* mobilenetv2_coreml.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenetv2_coreml.ptl; sourceTree = "<group>"; };
 		D6A60F972BD100B4000AB98A /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
@@ -66,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D682CD922BD111FE00AB1FF9 /* LibTorchLitSPM in Frameworks */,
+				C4077B7156971BD6419F2863 /* libPods-PytorchPractice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D8C959500F88B943C68C6C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				306C71989FAEE582A6F6D789 /* Pods-PytorchPractice.debug.xcconfig */,
+				02FBDC9FA2C0E53CF02CC78D /* Pods-PytorchPractice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D6A60F982BD100B4000AB98A /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D6A1A8FA2BD111DB00349ABC /* LibTorchLitSPM */,
+				B5D441376341A048FF650C0D /* libPods-PytorchPractice.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +136,7 @@
 				D6EC50DB2BD0D37F0067AC51 /* PytorchPracticeUITests */,
 				D6EC50BE2BD0D37E0067AC51 /* Products */,
 				D6A60FA92BD103BB000AB98A /* Frameworks */,
+				8D8C959500F88B943C68C6C3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6EC50E22BD0D37F0067AC51 /* Build configuration list for PBXNativeTarget "PytorchPractice" */;
 			buildPhases = (
+				879BD6EB0F3D5D94F530ED5C /* [CP] Check Pods Manifest.lock */,
 				D6EC50B92BD0D37E0067AC51 /* Sources */,
 				D6EC50BA2BD0D37E0067AC51 /* Frameworks */,
 				D6EC50BB2BD0D37E0067AC51 /* Resources */,
@@ -192,9 +208,6 @@
 			dependencies = (
 			);
 			name = PytorchPractice;
-			packageProductDependencies = (
-				D682CD912BD111FE00AB1FF9 /* LibTorchLitSPM */,
-			);
 			productName = PytorchPractice;
 			productReference = D6EC50BD2BD0D37E0067AC51 /* PytorchPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -259,7 +272,7 @@
 				};
 			};
 			buildConfigurationList = D6EC50B82BD0D37E0067AC51 /* Build configuration list for PBXProject "PytorchPractice" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -267,8 +280,6 @@
 				Base,
 			);
 			mainGroup = D6EC50B42BD0D37E0067AC51;
-			packageReferences = (
-			);
 			productRefGroup = D6EC50BE2BD0D37E0067AC51 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,6 +319,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		879BD6EB0F3D5D94F530ED5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PytorchPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D6EC50B92BD0D37E0067AC51 /* Sources */ = {
@@ -470,6 +506,7 @@
 		};
 		D6EC50E32BD0D37F0067AC51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 306C71989FAEE582A6F6D789 /* Pods-PytorchPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,6 +547,7 @@
 		};
 		D6EC50E42BD0D37F0067AC51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02FBDC9FA2C0E53CF02CC78D /* Pods-PytorchPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -678,13 +716,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D682CD912BD111FE00AB1FF9 /* LibTorchLitSPM */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = LibTorchLitSPM;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6EC50B52BD0D37E0067AC51 /* Project object */;
 }
