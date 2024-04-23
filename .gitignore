@@ -7,7 +7,7 @@
 # refactoring this file!
 
 ## PyTorch
-
+/ios/PytorchPractice/model/image_classification.ptl
 .coverage
 coverage.xml
 .dmypy.json

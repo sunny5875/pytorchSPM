@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C4077B7156971BD6419F2863 /* libPods-PytorchPractice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D441376341A048FF650C0D /* libPods-PytorchPractice.a */; };
-		D6A60F9C2BD100BA000AB98A /* mobilenetv2_coreml.ptl in Resources */ = {isa = PBXBuildFile; fileRef = D6A60F962BD100B4000AB98A /* mobilenetv2_coreml.ptl */; };
+		D685C6D32BD74710009AB097 /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = D685C6D22BD74710009AB097 /* result.json */; };
+		D685C6D42BD763C9009AB097 /* model.ptl in Resources */ = {isa = PBXBuildFile; fileRef = D685C6D12BD7470A009AB097 /* model.ptl */; };
+		D685C6D62BD7683F009AB097 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685C6D52BD7683F009AB097 /* MainTabView.swift */; };
+		D685C6D82BD768D2009AB097 /* TestModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685C6D72BD768D2009AB097 /* TestModelView.swift */; };
+		D6A60F9C2BD100BA000AB98A /* image_classification.ptl in Resources */ = {isa = PBXBuildFile; fileRef = D6A60F962BD100B4000AB98A /* image_classification.ptl */; };
 		D6A60F9D2BD100BA000AB98A /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = D6A60F972BD100B4000AB98A /* words.txt */; };
 		D6A60FA02BD100BA000AB98A /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A60F9B2BD100BA000AB98A /* image.png */; };
 		D6A60FA52BD100D9000AB98A /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = D6A60FA32BD100D9000AB98A /* TorchModule.mm */; };
 		D6A60FA72BD10271000AB98A /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A60FA62BD10271000AB98A /* UIImage+Helper.swift */; };
 		D6EC50C12BD0D37E0067AC51 /* PytorchPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC50C02BD0D37E0067AC51 /* PytorchPracticeApp.swift */; };
-		D6EC50C32BD0D37E0067AC51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC50C22BD0D37E0067AC51 /* ContentView.swift */; };
+		D6EC50C32BD0D37E0067AC51 /* TestImageClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC50C22BD0D37E0067AC51 /* TestImageClassificationView.swift */; };
 		D6EC50C52BD0D37F0067AC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EC50C42BD0D37F0067AC51 /* Assets.xcassets */; };
 		D6EC50C92BD0D37F0067AC51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EC50C82BD0D37F0067AC51 /* Preview Assets.xcassets */; };
 		D6EC50D32BD0D37F0067AC51 /* PytorchPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC50D22BD0D37F0067AC51 /* PytorchPracticeTests.swift */; };
@@ -43,8 +47,12 @@
 		02FBDC9FA2C0E53CF02CC78D /* Pods-PytorchPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PytorchPractice.release.xcconfig"; path = "Target Support Files/Pods-PytorchPractice/Pods-PytorchPractice.release.xcconfig"; sourceTree = "<group>"; };
 		306C71989FAEE582A6F6D789 /* Pods-PytorchPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PytorchPractice.debug.xcconfig"; path = "Target Support Files/Pods-PytorchPractice/Pods-PytorchPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		B5D441376341A048FF650C0D /* libPods-PytorchPractice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PytorchPractice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D685C6D12BD7470A009AB097 /* model.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.ptl; sourceTree = "<group>"; };
+		D685C6D22BD74710009AB097 /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
+		D685C6D52BD7683F009AB097 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D685C6D72BD768D2009AB097 /* TestModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelView.swift; sourceTree = "<group>"; };
 		D6A1A8FA2BD111DB00349ABC /* LibTorchLitSPM */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LibTorchLitSPM; path = ../LibTorchLitSPM; sourceTree = "<group>"; };
-		D6A60F962BD100B4000AB98A /* mobilenetv2_coreml.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenetv2_coreml.ptl; sourceTree = "<group>"; };
+		D6A60F962BD100B4000AB98A /* image_classification.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = image_classification.ptl; sourceTree = "<group>"; };
 		D6A60F972BD100B4000AB98A /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		D6A60F9B2BD100BA000AB98A /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		D6A60FA12BD100D9000AB98A /* HelloWorld-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloWorld-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -53,7 +61,7 @@
 		D6A60FA62BD10271000AB98A /* UIImage+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
 		D6EC50BD2BD0D37E0067AC51 /* PytorchPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PytorchPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EC50C02BD0D37E0067AC51 /* PytorchPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PytorchPracticeApp.swift; sourceTree = "<group>"; };
-		D6EC50C22BD0D37E0067AC51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6EC50C22BD0D37E0067AC51 /* TestImageClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageClassificationView.swift; sourceTree = "<group>"; };
 		D6EC50C42BD0D37F0067AC51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6EC50C62BD0D37F0067AC51 /* PytorchPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PytorchPractice.entitlements; sourceTree = "<group>"; };
 		D6EC50C82BD0D37F0067AC51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -96,14 +104,25 @@
 				306C71989FAEE582A6F6D789 /* Pods-PytorchPractice.debug.xcconfig */,
 				02FBDC9FA2C0E53CF02CC78D /* Pods-PytorchPractice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D685C6D92BD76966009AB097 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D685C6D52BD7683F009AB097 /* MainTabView.swift */,
+				D6EC50C22BD0D37E0067AC51 /* TestImageClassificationView.swift */,
+				D685C6D72BD768D2009AB097 /* TestModelView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D6A60F982BD100B4000AB98A /* model */ = {
 			isa = PBXGroup;
 			children = (
-				D6A60F962BD100B4000AB98A /* mobilenetv2_coreml.ptl */,
+				D685C6D22BD74710009AB097 /* result.json */,
+				D685C6D12BD7470A009AB097 /* model.ptl */,
+				D6A60F962BD100B4000AB98A /* image_classification.ptl */,
 				D6A60F972BD100B4000AB98A /* words.txt */,
 			);
 			path = model;
@@ -153,9 +172,9 @@
 		D6EC50BF2BD0D37E0067AC51 /* PytorchPractice */ = {
 			isa = PBXGroup;
 			children = (
-				D6EC50C02BD0D37E0067AC51 /* PytorchPracticeApp.swift */,
-				D6EC50C22BD0D37E0067AC51 /* ContentView.swift */,
 				D6A60FA62BD10271000AB98A /* UIImage+Helper.swift */,
+				D685C6D92BD76966009AB097 /* View */,
+				D6EC50C02BD0D37E0067AC51 /* PytorchPracticeApp.swift */,
 				D6EC50C42BD0D37F0067AC51 /* Assets.xcassets */,
 				D6A60F9B2BD100BA000AB98A /* image.png */,
 				D6A60F982BD100B4000AB98A /* model */,
@@ -296,10 +315,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A60F9C2BD100BA000AB98A /* mobilenetv2_coreml.ptl in Resources */,
+				D6A60F9C2BD100BA000AB98A /* image_classification.ptl in Resources */,
 				D6EC50C92BD0D37F0067AC51 /* Preview Assets.xcassets in Resources */,
 				D6A60F9D2BD100BA000AB98A /* words.txt in Resources */,
 				D6A60FA02BD100BA000AB98A /* image.png in Resources */,
+				D685C6D42BD763C9009AB097 /* model.ptl in Resources */,
+				D685C6D32BD74710009AB097 /* result.json in Resources */,
 				D6EC50C52BD0D37F0067AC51 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,10 +371,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6EC50C32BD0D37E0067AC51 /* ContentView.swift in Sources */,
+				D6EC50C32BD0D37E0067AC51 /* TestImageClassificationView.swift in Sources */,
 				D6EC50C12BD0D37E0067AC51 /* PytorchPracticeApp.swift in Sources */,
+				D685C6D82BD768D2009AB097 /* TestModelView.swift in Sources */,
 				D6A60FA52BD100D9000AB98A /* TorchModule.mm in Sources */,
 				D6A60FA72BD10271000AB98A /* UIImage+Helper.swift in Sources */,
+				D685C6D62BD7683F009AB097 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +551,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -569,7 +592,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;

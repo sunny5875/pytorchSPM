@@ -9,6 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 - (nullable NSArray<NSNumber*>*)predictImage:(void*)imageBuffer NS_SWIFT_NAME(predict(image:));
+- (nullable NSMutableArray*)predict:(void*)buffer NS_SWIFT_NAME(predict(buffer:));
 
 @end
 
